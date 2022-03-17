@@ -1,5 +1,5 @@
 package backjoon_function;
-//testtest
+
 import java.util.ArrayList;
 
 public class Self {
