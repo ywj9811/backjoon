@@ -21,11 +21,11 @@ public class B_2869 {
 		do {
 			n++;
 			if(v - (a - b)*n <= a) {
-				bw.write(String.valueOf((n+1)));//왜 안나오는가
-				System.out.println(n + 1);
+				bw.write(String.valueOf((n+1)));
 				break;
 			}
 		} while(true);
+		bw.flush();
+		bw.close();
 	}
 }
-//나중에writer 질문!
