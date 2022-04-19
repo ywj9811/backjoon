@@ -1,19 +1,35 @@
 package baekjoon_greedy;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class B_2847 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		//게임을 만들었다.
-		int n = sc.nextInt();//n개의 레벨이 존재
-		//클리어 할때마다 점수가 주어진다.
+	public static void main(String[] args) throws Exception{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		//레벨을 난이도 순으로 배치함, 실수로 쉬운 레벨이 어려운 레벨보다 점수를 많이 받는 경우를 만들었다.
-		int level[] = new int[n];
+		int n = Integer.parseInt(br.readLine()); //몇개의 레벨을 만들것인가
+		
+		int[] lev = new int[n];
 		for(int i = 0; i < n; i++) {
-			level[i] = sc.nextInt();
+			lev[i] = Integer.parseInt(br.readLine());
 		}
+		//레벨들을 모두 입력받음
+		
+		int cnt = 0;
+		int max = lev[n-1];
+		
+		for(int i = n - 2; i >= 0; i--) {
+			if(lev[i] >= max) {
+				while(lev[i] >= max) {
+					lev[i]--;
+					cnt++;
+				}
+				max = lev[i];
+			}
+			else
+				max = lev[i];
+		}
+		
+		System.out.println(cnt);
 	}
 }
-//다시하자
