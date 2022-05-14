@@ -92,6 +92,7 @@ public class B_1181 {
 			bw.write(str[i]);
 			bw.newLine();
 			bw.flush();
+			
 		}
 
 		bw.close();
