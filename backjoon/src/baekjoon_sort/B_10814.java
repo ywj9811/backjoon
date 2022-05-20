@@ -20,8 +20,6 @@ public class B_10814 {
 		//user에 순서대로 들어있다.
 		
 		
-		
-		
 //		String user[][] = new String[n][2];
 //		
 //		for(int i = 0; i < n; i++) {
